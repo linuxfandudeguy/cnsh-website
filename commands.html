@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commands for cnsh</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet">
+    <style>
+        .code-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">cnsh</div>
+            <div>
+                <a href="features.html" class="text-gray-600 hover:text-indigo-600 mx-4">Features</a>
+                <a href="install.html" class="text-gray-600 hover:text-indigo-600 mx-4">Install</a>
+                <a href="commands.html" class="text-gray-600 hover:text-indigo-600 mx-4">Commands</a>
+                <a href="flags.html" class="text-gray-600 hover:text-indigo-600 mx-4">Flags</a>
+                <a href="contact.html" class="text-gray-600 hover:text-indigo-600 mx-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Commands Section -->
+    <section id="commands" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-indigo-600 text-center">Commands for cnsh</h2>
+            <div class="mt-10 space-y-8">
+                <!-- Init Command -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`init`</h3>
+                    <p class="mt-2 text-gray-600">Initialize a new project or create a default package.json file.</p>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh init [-y]</code></pre>
+                </div>
+                <!-- Add Command -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`add`</h3>
+                    <p class="mt-2 text-gray-600">Install a package. Use `-g` to install globally.</p>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh add [package] [-g]</code></pre>
+                </div>
+                <!-- Remove Command -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`remove`</h3>
+                    <p class="mt-2 text-gray-600">Remove a package. The package will be uninstalled from the project or globally.</p>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh remove [package]</code></pre>
+                </div>
+                <!-- Install Command -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`install`</h3>
+                    <p class="mt-2 text-gray-600">Install all dependencies listed in package.json.</p>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh install</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-4">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2024 cnsh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Prism.js for Syntax Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+</body>
+</html>
