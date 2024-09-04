@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cnsh - Features</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Prism.js -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css" rel="stylesheet">
+    <style>
+        .code-container {
+            max-height: 400px; /* Adjust height as needed */
+            overflow: auto;
+            background-color: #f5f2f0; /* Light background for code blocks */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">cnsh</div>
+            <div>
+                <a href="index.html" class="text-gray-600 hover:text-indigo-600 mx-4">Home</a>
+                <a href="features.html" class="text-gray-600 hover:text-indigo-600 mx-4">Features</a>
+                <a href="install.html" class="text-gray-600 hover:text-indigo-600 mx-4">Install</a>
+                <a href="commands.html" class="text-gray-600 hover:text-indigo-600 mx-4">Commands</a>
+                <a href="flags.html" class="text-gray-600 hover:text-indigo-600 mx-4">Flags</a>
+                <a href="contact.html" class="text-gray-600 hover:text-indigo-600 mx-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Features Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold text-indigo-600">Features of cnsh</h1>
+            <p class="mt-4 text-lg text-gray-600">Discover the features that make `cnsh` a powerful and efficient package manager.</p>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">Lightweight</h2>
+                    <p class="mt-2 text-gray-600">`cnsh` is designed to be lightweight, ensuring fast and efficient package management without unnecessary bloat.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">Performance-Friendly</h2>
+                    <p class="mt-2 text-gray-600">Optimized for performance, `cnsh` minimizes overhead during package installation, making it a swift choice for developers.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">Easy Integration</h2>
+                    <p class="mt-2 text-gray-600">With a straightforward command structure, `cnsh` integrates seamlessly into your development workflow, simplifying package management.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">Global and Local Installations</h2>
+                    <p class="mt-2 text-gray-600">Support for both global and local package installations allows for flexible management of dependencies and tools.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">Detailed Logging</h2>
+                    <p class="mt-2 text-gray-600">The `--verbose` flag provides detailed logging, aiding in debugging and tracking installation processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold text-indigo-600">How It Works</h1>
+            <p class="mt-4 text-lg text-gray-600">Here's a step-by-step guide on how `cnsh` operates:</p>
+            <div class="mt-10 space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">1. Command Detection</h2>
+                    <p class="mt-2 text-gray-600">`cnsh` detects if you typed the command `cnsh add` and begins the process of adding a package.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">2. Loading Animation</h2>
+                    <p class="mt-2 text-gray-600">`cnsh` uses `ora` to display a loading animation while processing the request, keeping you informed of the progress.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">3. Fetching Package</h2>
+                    <p class="mt-2 text-gray-600">`cnsh` calls `axios` to fetch the tarball of the npm package from the npm registry API.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">4. Extracting Tarball</h2>
+                    <p class="mt-2 text-gray-600">`cnsh` uses `tar` to extract the tarball, which contains the package files.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">5. Saving Files</h2>
+                    <p class="mt-2 text-gray-600">`cnsh` saves the extracted files into a directory called `cnsh_lib`, created by `fs-extra`.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">6. Error Handling</h2>
+                    <p class="mt-2 text-gray-600">If an error occurs during any step, `cnsh` uses `chalk` to display colored error messages in the terminal, helping you quickly identify and address issues.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">7. Using the Package</h2>
+                    <p class="mt-2 text-gray-600">You can now use the installed package in your project. For example:</p>
+                    <div class="code-container mt-4">
+                        <pre><code class="language-javascript">async function fetchData() {
+    try {
+        const axios = await import('./cnsh_lib/axios/package/dist/esm/axios.min.js');
+        const response = await axios.default.get('https://jsonplaceholder.typicode.com/posts/1');
+        console.log('Data fetched:', response.data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+fetchData();</code></pre>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold text-gray-800">8. Written in ESM</h2>
+                    <p class="mt-2 text-gray-600">`cnsh` is written in a variant of JavaScript called ECMAScript Modules (ESM), which provides a modern approach to module management and imports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-4">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2024 cnsh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Prism.js -->
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cnsh - Lightweight and Performance-Friendly Package Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">cnsh</div>
+            <div>
+                <a href="features.html" class="text-gray-600 hover:text-indigo-600 mx-4">Features</a>
+                <a href="install.html" class="text-gray-600 hover:text-indigo-600 mx-4">Install</a>
+                <a href="commands.html" class="text-gray-600 hover:text-indigo-600 mx-4">Commands</a>
+                <a href="flags.html" class="text-gray-600 hover:text-indigo-600 mx-4">Flags</a>
+                <a href="contact.html" class="text-gray-600 hover:text-indigo-600 mx-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-indigo-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold">Welcome to cnsh</h1>
+            <p class="mt-4 text-lg">A lightweight and performance-friendly package manager for Node.js</p>
+            <a href="getting-started.html" class="mt-8 inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-indigo-600">Features</h2>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">Lightweight</h3>
+                    <p class="mt-2 text-gray-600">cnsh is designed to be lightweight, ensuring fast and efficient package management.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">Performance-Friendly</h3>
+                    <p class="mt-2 text-gray-600">Optimized for performance, cnsh minimizes overhead during package installation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">Easy to Use</h3>
+                    <p class="mt-2 text-gray-600">With simple commands, cnsh is easy to integrate into your workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Install Section -->
+    <section id="install" class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-indigo-600">Installation</h2>
+            <p class="mt-4 text-gray-600">Install cnsh globally using npm, yarn, or pnpm:</p>
+            <div class="mt-6">
+                <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md"><code>npm install -g cnsh --verbose</code></pre>
+                <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md"><code>yarn global add cnsh --verbose</code></pre>
+                <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md"><code>pnpm add -g cnsh --verbose</code></pre>
+            </div>
+            <p class="mt-4 text-gray-600">Once installed, you can start managing your packages with cnsh commands.</p>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section id="commands" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-indigo-600 text-center">Commands</h2>
+            <div class="mt-10 space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`cnsh add [package]`</h3>
+                    <p class="mt-2 text-gray-600">Adds a package to the `cnsh_lib` folder and updates the `package-lock` file.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`cnsh remove [package]`</h3>
+                    <p class="mt-2 text-gray-600">Removes a package from the `cnsh_lib` folder and updates the `package-lock` file.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`cnsh add -g [package]`</h3>
+                    <p class="mt-2 text-gray-600">Globally installs a package, making it available system-wide.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`cnsh remove -g [package]`</h3>
+                    <p class="mt-2 text-gray-600">Removes a globally installed package from the system.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`cnsh install`</h3>
+                    <p class="mt-2 text-gray-600">Installs all dependencies listed in the `package.json` file to the `cnsh_lib` folder.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flags Section -->
+    <section id="flags" class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-indigo-600 text-center">Flags</h2>
+            <div class="mt-10 space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`--verbose` or `-v`</h3>
+                    <p class="mt-2 text-gray-600">Enables detailed logging output for debugging and tracking installation steps.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">`-g`</h3>
+                    <p class="mt-2 text-gray-600">Specifies that a package should be installed or removed globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-indigo-600 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold">Contact Us</h2>
+            <p class="mt-4">Have questions or feedback? You can contact us by forking our official GitHub repository and adding a file named <code>review.md</code> with your review or comments.</p>
+            <p class="mt-4">Find the repository here: <a href="https://github.com/linuxfandudeguy/cnsh" class="underline">linuxfandudeguy/cnsh</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-4">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2024 cnsh. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
