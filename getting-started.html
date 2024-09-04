@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started with cnsh</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet">
+    <style>
+        .code-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">cnsh</div>
+            <div>
+                <a href="features.html" class="text-gray-600 hover:text-indigo-600 mx-4">Features</a>
+                <a href="install.html" class="text-gray-600 hover:text-indigo-600 mx-4">Install</a>
+                <a href="commands.html" class="text-gray-600 hover:text-indigo-600 mx-4">Commands</a>
+                <a href="flags.html" class="text-gray-600 hover:text-indigo-600 mx-4">Flags</a>
+                <a href="contact.html" class="text-gray-600 hover:text-indigo-600 mx-4">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-indigo-600 text-center">Get Started with cnsh</h2>
+            <p class="mt-4 text-gray-600 text-center">Here's a step-by-step guide to get you started with `cnsh`:</p>
+            <div class="mt-10 space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">1. Install cnsh</h3>
+                    <p class="mt-2 text-gray-600">Install `cnsh` globally using npm:</p>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>npm install -g cnsh --verbose</code></pre>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">2. Add or Remove Packages</h3>
+                    <p class="mt-2 text-gray-600">Use the following commands to add or remove packages:</p>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh add [package]</code></pre>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh remove [package]</code></pre>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh add -g [package]</code></pre>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh remove -g [package]</code></pre>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">3. Install Dependencies</h3>
+                    <p class="mt-2 text-gray-600">To install all dependencies listed in your `package.json`, use:</p>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>cnsh install</code></pre>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">4. Using Packages in Your Project</h3>
+                    <p class="mt-2 text-gray-600">Here’s how you can use an installed package in your project:</p>
+                    <pre class="bg-gray-800 text-white p-4 rounded-lg shadow-md code-container"><code>async function fetchData() {
+    try {
+        const axios = await import('./cnsh_lib/axios/package/dist/esm/axios.min.js');
+        const response = await axios.default.get('https://jsonplaceholder.typicode.com/posts/1');
+        console.log('Data fetched:', response.data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+fetchData();</code></pre>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800">5. Troubleshooting</h3>
+                    <p class="mt-2 text-gray-600">If you encounter any issues, check the common problems and solutions below:</p>
+                    <ul class="list-disc list-inside mt-2 text-gray-600">
+                        <li>
+                            <strong>Issue:</strong> ✖ Failed to install {pkg}: Downloaded tarball is too small, indicating a possible issue. <br>
+                            <strong>Solution:</strong> This error is commonly encountered with small packages, but it can also indicate that the tarball downloaded is corrupted. Try reinstalling the package or check the package source for issues.
+                        </li>
+                        <li>
+                            <strong>Issue:</strong> ✖ Failed to install {pkg}: Failed to fetch package metadata: Request failed with status code 404. <br>
+                            <strong>Solution:</strong> This error means the package you are trying to install does not exist. Verify the package name and try again.
+                        </li>
+                        <li>
+                            <strong>Issue:</strong> ✖ Failed to install {pkg}: Failed to fetch package metadata: <br>
+                            <strong>Solution:</strong> This usually indicates a Wi-Fi connection issue. Check your internet connection and try again.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-4">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2024 cnsh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Prism.js for Syntax Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+</body>
+</html>
